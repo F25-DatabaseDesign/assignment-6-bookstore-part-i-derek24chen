@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-layout">
+    <section class="left-column">
+        <h2>Categories</h2>
+        <div class="category-buttons">
+            {% for category in categories %}
+                {% if category.id == selected_category_id %}
+                    <div class="category-button selectedCategory">
+                        <a href="/category/{{ category.id }}">{{ category.name }}</a>
+                    </div>
+                {% else %}
+                    <div class="category-button notSelectedCategory">
+                        <a href="/category/{{ category.id }}">{{ category.name }}</a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="right-column">
+        <h2>{{ selected_category_name }} Books</h2>
+        {% if books %}
+            <div class="book-grid">
+                {% for book in books %}
+                    <div class="bookItem">
+                        <h3>{{ book.title }}</h3>
+                        <p><strong>Author:</strong> {{ book.author }}</p>
+                        <p><strong>ISBN:</strong> {{ book.ISBN }}</p>
+                        <p><strong>Price:</strong> ${{ "%.2f"|format(book.price) }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No books found in this category.</p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

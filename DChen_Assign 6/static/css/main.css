@@ -1,0 +1,161 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fafafa;
+    color: #222;
+}
+
+header {
+    background-color: #2d3e50;
+    color: #fff;
+    padding: 15px 25px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.tagline {
+    margin: 2px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.category-dropdown {
+    text-align: right;
+}
+
+.nav-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.dropdown-content p {
+    margin: 2px 0;
+}
+
+.dropdown-content a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px 25px;
+}
+
+.page-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+}
+
+.left-column h2,
+.right-column h2 {
+    margin-top: 0;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+.category-card a {
+    text-decoration: none;
+    color: #2d3e50;
+}
+
+.category-card a:hover {
+    text-decoration: underline;
+}
+
+.category-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-button {
+    padding: 8px 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.category-button a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Highlighted vs non-highlighted categories */
+
+.selectedCategory {
+    background-color: #2d3e50;
+}
+
+.selectedCategory a {
+    color: #fff;
+}
+
+.notSelectedCategory {
+    background-color: #e0e0e0;
+}
+
+.notSelectedCategory a {
+    color: #222;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.bookItem {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 4px;
+}
+
+.bookItem h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+footer {
+    background-color: #2d3e50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.error-page {
+    text-align: center;
+    margin-top: 40px;
+}

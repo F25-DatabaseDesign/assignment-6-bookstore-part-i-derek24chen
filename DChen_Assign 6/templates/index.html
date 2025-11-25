@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-layout">
+    <section class="left-column">
+        <h2>Welcome to The Reading Room</h2>
+        <p>
+            The Reading Room is a small curated bookstore that focuses on stories that inspire and
+            teach. Whether you are diving into the lives of remarkable people in our
+            <strong>Biographies</strong> section, sharpening your skills with <strong>Music Theory</strong>,
+            staying motivated with <strong>Sports</strong> reads, or exploring flavors in
+            <strong>Food Recipes</strong>, there is something here for every curious reader.
+        </p>
+        <p>
+            Choose a category on the right to view the full list of books available in that section.
+        </p>
+    </section>
+
+    <section class="right-column">
+        <h2>Browse Categories</h2>
+        <div class="category-list">
+            {% for category in categories %}
+                <div class="category-card">
+                    <h3><a href="/category/{{ category.id }}">{{ category.name }}</a></h3>
+                    <p><a href="/category/{{ category.id }}">View {{ category.name }} books →</a></p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}
